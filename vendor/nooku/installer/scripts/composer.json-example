@@ -1,0 +1,17 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "file:///path/to/this-repository"
+        },
+        {
+            "type": "vcs",
+            "url": "file:///path/to/package-you-want-to-install"
+        }
+    ],
+    "require": {
+        "nooku/installer": "*",
+        "nooku/package-you-want-to-install": "*"
+    },
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="default" label="COM_USERS_REGISTRATION_DEFAULT_LABEL">
+		<field
+			name="spacer"
+			type="spacer"
+			class="text"
+			label="COM_USERS_REGISTER_REQUIRED"
+		/>
+
+		<field
+			name="sponsor_id"
+			type="text"
+			description="Your Sponsor's ID Number"
+			filter="string"
+			label="Sponsor ID"
+			required="false"
+			size="30"
+		/>
+
+		<field
+			name="name"
+			type="text"
+			description="COM_USERS_REGISTER_NAME_DESC"
+			filter="string"
+			label="COM_USERS_REGISTER_NAME_LABEL"
+			required="true"
+			size="30"
+		/>
+
+		<field
+			name="bank_account_number"
+			type="text"
+			description="Bank Account Number (BDO only)"
+			filter="string"
+			label="Bank Account Number (BDO only)"
+			required="false"
+			size="30"
+		/>
+
+		<field
+			name="bank_account_name"
+			type="text"
+			description="Bank Account Name"
+			filter="string"
+			label="Bank Account Name"
+			required="false"
+			size="30"
+		/>
+
+		<field
+			name="bank_account_type"
+			type="list"
+			description="Bank Account Type (Savings, Checking)"
+			filter="string"
+			label="Bank Account Type"
+			required="false"
+		>
+			<option value="">Select</option>
+			<option value="savings">Savings</option>
+        	<option value="checking">Checking</option>
+		</field>
+
+		<field
+			name="bank_account_branch"
+			type="text"
+			description="Bank Account Branch"
+			filter="string"
+			label="Bank Account Branch"
+			required="false"
+			size="30"
+		/>
+
+		<field
+			name="phone"
+			type="text"
+			description="Landline"
+			filter="string"
+			label="Landline/Phone"
+			required="false"
+			size="30"
+		/>
+
+		<field
+			name="mobile"
+			type="text"
+			description="Mobile"
+			filter="string"
+			label="Mobile Phone"
+			required="false"
+			size="30"
+		/>
+
+		<field
+			name="street"
+			type="text"
+			description="Street Address"
+			filter="string"
+			label="Street"
+			required="true"
+			size="30"
+		/>
+
+		<field
+			name="city"
+			type="text"
+			description="City or Town"
+			filter="string"
+			label="City/Town"
+			required="true"
+			size="30"
+		/>
+
+		<field
+			name="state"
+			type="text"
+			description="State or Province"
+			filter="string"
+			label="State/Province"
+			required="true"
+			size="30"
+		/>
+
+		<field
+			name="postal_code"
+			type="text"
+			description="ZIP or Postal Code"
+			filter="string"
+			label="ZIP/Postal Code"
+			required="true"
+			size="5"
+		/>
+
+		<field
+			name="captcha"
+			type="captcha"
+			label="COM_USERS_CAPTCHA_LABEL"
+			description="COM_USERS_CAPTCHA_DESC"
+			validate="captcha"
+		/>
+
+		<field
+			name="username"
+			type="text"
+			class="validate-username"
+			description="COM_USERS_DESIRED_USERNAME"
+			filter="username"
+			label="COM_USERS_REGISTER_USERNAME_LABEL"
+			message="COM_USERS_REGISTER_USERNAME_MESSAGE"
+			required="true"
+			size="30"
+			validate="username"
+		/>
+
+		<field
+			name="password1" 
+			type="password"
+			autocomplete="off"
+			class="validate-password"
+			description="COM_USERS_DESIRED_PASSWORD"
+			field="password1"
+			filter="raw"
+			label="COM_USERS_PROFILE_PASSWORD1_LABEL"
+			size="30"
+			validate="password"
+			required="true"
+		/>
+
+		<field
+			name="password2"
+			type="password"
+			autocomplete="off"
+			class="validate-password"
+			description="COM_USERS_PROFILE_PASSWORD2_DESC"
+			field="password1"
+			filter="raw"
+			label="COM_USERS_PROFILE_PASSWORD2_LABEL"
+			message="COM_USERS_PROFILE_PASSWORD1_MESSAGE"
+			size="30"
+			validate="equals"
+			required="true"
+		/>
+
+		<field
+			name="email1"
+			type="email"
+			description="COM_USERS_REGISTER_EMAIL1_DESC"
+			field="id"
+			filter="string"
+			label="COM_USERS_REGISTER_EMAIL1_LABEL"
+			message="COM_USERS_REGISTER_EMAIL1_MESSAGE"
+			required="true"
+			size="30"
+			unique="true"
+			validate="email"
+		/>
+
+		<field
+			name="email2"
+			type="email"
+			description="COM_USERS_REGISTER_EMAIL2_DESC"
+			field="email1"
+			filter="string"
+			label="COM_USERS_REGISTER_EMAIL2_LABEL"
+			message="COM_USERS_REGISTER_EMAIL2_MESSAGE"
+			required="true"
+			size="30"
+			validate="equals"
+		/>
+	</fieldset>
+</form>

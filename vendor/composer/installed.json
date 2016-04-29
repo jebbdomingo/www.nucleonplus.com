@@ -1,0 +1,156 @@
+[
+    {
+        "name": "nooku/installer",
+        "version": "v1.0.6",
+        "version_normalized": "1.0.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nooku/nooku-installer.git",
+            "reference": "006ff84334f5d23945cd56f832070ad388d40ee3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/nooku/nooku-installer/zipball/006ff84334f5d23945cd56f832070ad388d40ee3",
+            "reference": "006ff84334f5d23945cd56f832070ad388d40ee3",
+            "shasum": ""
+        },
+        "require": {
+            "composer-plugin-api": "^1.0"
+        },
+        "time": "2015-06-11 14:10:27",
+        "type": "composer-plugin",
+        "extra": {
+            "class": "Nooku\\Composer\\InstallerPlugin"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Nooku\\Composer\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPLv3"
+        ],
+        "authors": [
+            {
+                "name": "Timble",
+                "email": "info@timble.net",
+                "homepage": "http://www.timble.net"
+            }
+        ],
+        "description": "A Composer plugin to install Nooku Framework into any Joomla site.",
+        "homepage": "https://github.com/nooku/nooku-installer",
+        "keywords": [
+            "component",
+            "framework",
+            "installer",
+            "joomla",
+            "nooku",
+            "platform"
+        ]
+    },
+    {
+        "name": "symfony/yaml",
+        "version": "v2.8.4",
+        "version_normalized": "2.8.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/yaml.git",
+            "reference": "584e52cb8f788a887553ba82db6caacb1d6260bb"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/yaml/zipball/584e52cb8f788a887553ba82db6caacb1d6260bb",
+            "reference": "584e52cb8f788a887553ba82db6caacb1d6260bb",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.9"
+        },
+        "time": "2016-03-04 07:54:35",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.8-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Yaml\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Yaml Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "nooku/nooku-framework",
+        "version": "v2.1.5",
+        "version_normalized": "2.1.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nooku/nooku-framework.git",
+            "reference": "a24e8cebf028ec2607dd5453f17ac5db87c332f1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/nooku/nooku-framework/zipball/a24e8cebf028ec2607dd5453f17ac5db87c332f1",
+            "reference": "a24e8cebf028ec2607dd5453f17ac5db87c332f1",
+            "shasum": ""
+        },
+        "require": {
+            "nooku/installer": "~1.0",
+            "symfony/yaml": "~2.6"
+        },
+        "suggest": {
+            "erusev/parsedown-extra": "Allows using Markddown in templates",
+            "mustache/mustache": "Allows building logic less templates using the Mustache syntax",
+            "twig/twig": "Allows building templates using the Twig template engine"
+        },
+        "time": "2016-02-03 16:59:14",
+        "type": "nooku-framework",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "autoload.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPLv3"
+        ],
+        "authors": [
+            {
+                "name": "Timble",
+                "email": "info@timble.net",
+                "homepage": "http://www.timble.net"
+            }
+        ],
+        "description": "Nooku Framework is an open-source extension framework for Joomla",
+        "homepage": "https://github.com/nooku/nooku-framework",
+        "keywords": [
+            "extension",
+            "framework",
+            "joomla",
+            "nooku"
+        ]
+    }
+]
