@@ -1,0 +1,16 @@
+
+administrator/components/com_nucleonplus
+
+administrator/components/com_qbsync
+
+components/com_nucleonplus
+
+logs/error.php
+
+logs/jcontroller.log.php
+
+media/com_nucleonplus
+
+media/com_qbsync
+
+plugins/user/nucleonplus
