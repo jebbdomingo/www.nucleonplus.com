@@ -14,3 +14,5 @@ media/com_nucleonplus
 media/com_qbsync
 
 plugins/user/nucleonplus
+
+configuration.php
