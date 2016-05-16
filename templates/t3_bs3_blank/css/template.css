@@ -2412,3 +2412,11 @@ a.list-group-item.active:focus .list-group-item-text {
   opacity: .8;
   display: inline-block;
 }
+
+.view-registration .input-append {
+  display: inline-flex;
+}
+.view-registration  #jform_profile_tos-lbl .modal {
+  display: inherit;
+  position: inherit;
+}
