@@ -224,9 +224,9 @@ $doc->addScriptDeclaration(
 <!-- Header -->
 <?php if ($displayHeader) : ?>
 	<header class="header<?php echo $header_is_light ? ' header-inverse' : ''; ?>">
-		<div class="container-logo">
+		<!-- <div class="container-logo">
 			<img src="<?php echo $logo; ?>" class="logo" alt="<?php echo $sitename;?>" />
-		</div>
+		</div> -->
 		<div class="container-title">
 			<jdoc:include type="modules" name="title" />
 		</div>
