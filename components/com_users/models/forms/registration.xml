@@ -113,13 +113,17 @@
 
 		<field
 			name="state"
-			type="text"
-			description="State or Province"
+			type="list"
+			description="Region"
 			filter="string"
-			label="State/Province"
+			label="Region"
 			required="true"
-			size="30"
-		/>
+		>
+			<option value="metro_manila">Metro Manila</option>
+        	<option value="luzon">Luzon</option>
+        	<option value="visayas">Visayas</option>
+        	<option value="mindanao">Mindanao</option>
+		</field>
 
 		<field
 			name="postal_code"
