@@ -1,2 +1,0 @@
-#SetEnv APP_ENV production
-SetEnv APP_ENV staging

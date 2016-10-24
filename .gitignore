@@ -16,3 +16,11 @@ media/com_qbsync
 plugins/user/nucleonplus
 
 configuration.php
+
+.htaccess
+
+configuration.php
+
+configuration.production.php
+
+configuration.php
