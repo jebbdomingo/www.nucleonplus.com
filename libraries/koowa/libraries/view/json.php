@@ -215,7 +215,7 @@ class KViewJson extends KViewAbstract
         if ($method !== '_getEntity' && method_exists($this, $method)) {
             $data = $this->$method($entity);
         } else {
-            $data = $entity->toArray();
+            $data = $entity->getProperties();
         }
 
         if (!empty($this->_fields)) {
