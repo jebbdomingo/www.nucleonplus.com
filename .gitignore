@@ -3,6 +3,8 @@ administrator/components/com_nucleonplus
 
 administrator/components/com_qbsync
 
+administrator/cache
+
 components/com_nucleonplus
 
 logs/error.php
