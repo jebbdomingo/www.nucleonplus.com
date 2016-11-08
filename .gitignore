@@ -26,3 +26,11 @@ configuration.php
 configuration.production.php
 
 configuration.php
+
+administrator/components/com_cart
+
+components/com_cart
+
+libraries/koowa/components/com_dragonpay
+
+test_form.html
