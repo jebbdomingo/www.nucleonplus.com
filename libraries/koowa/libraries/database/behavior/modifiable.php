@@ -85,8 +85,16 @@ class KDatabaseBehaviorModifiable extends KDatabaseBehaviorAbstract
 
         if(!empty($modified))
         {
-            if($this->hasProperty('modified_by')) {
-                $this->modified_by = (int) $this->getObject('user')->getId();
+            if($this->hasProperty('modified_by'))
+            {
+                // JFactory::getUser()->id is needed to support Joomla login/authentication programatically
+                // Nooku's user object needs to reinitialize after calling JFactory::getApplication('site')->login() hence the need for JFactory::getUser()->id
+                $userId = (int) $this->getObject('user')->getId();
+                if (!$userId) {
+                    $userId = (int) JFactory::getUser()->id
+                }
+
+                $this->modified_by = $userId;
             }
 
             if($this->hasProperty('modified_on')) {

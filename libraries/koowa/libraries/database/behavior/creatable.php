@@ -66,8 +66,16 @@ class KDatabaseBehaviorCreatable extends KDatabaseBehaviorAbstract
         $mixer = $this->getMixer();
         $table = $mixer instanceof KDatabaseRowInterface ?  $mixer->getTable() : $mixer;
 
-        if($this->hasProperty('created_by') && empty($this->created_by)) {
-            $this->created_by  = (int) $this->getObject('user')->getId();
+        if($this->hasProperty('created_by') && empty($this->created_by))
+        {
+            // JFactory::getUser()->id is needed to support Joomla login/authentication programatically
+            // Nooku's user object needs to reinitialize after calling JFactory::getApplication('site')->login() hence the need for JFactory::getUser()->id
+            $userId = (int) $this->getObject('user')->getId();
+            if (!$userId) {
+                $userId = (int) JFactory::getUser()->id
+            }
+
+            $this->created_by  = $userId;
         }
 
         if($this->hasProperty('created_on') && (empty($this->created_on) || $this->created_on == $table->getDefault('created_on'))) {
