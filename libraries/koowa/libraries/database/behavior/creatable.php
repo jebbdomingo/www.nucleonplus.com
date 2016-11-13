@@ -72,7 +72,7 @@ class KDatabaseBehaviorCreatable extends KDatabaseBehaviorAbstract
             // Nooku's user object needs to reinitialize after calling JFactory::getApplication('site')->login() hence the need for JFactory::getUser()->id
             $userId = (int) $this->getObject('user')->getId();
             if (!$userId) {
-                $userId = (int) JFactory::getUser()->id
+                $userId = (int) JFactory::getUser()->id;
             }
 
             $this->created_by  = $userId;
