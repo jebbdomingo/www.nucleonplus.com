@@ -9,16 +9,6 @@
 		/>
 
 		<field
-			name="sponsor_id"
-			type="text"
-			description="Your Sponsor's ID Number"
-			filter="string"
-			label="Sponsor ID"
-			required="false"
-			size="30"
-		/>
-
-		<field
 			name="name"
 			type="text"
 			description="COM_USERS_REGISTER_NAME_DESC"
@@ -95,6 +85,16 @@
 			required="true"
 			size="30"
 			validate="equals"
+		/>
+
+		<field
+			name="sponsor_id"
+			type="text"
+			description="Your Sponsor's ID Number"
+			filter="string"
+			label="Sponsor ID"
+			required="false"
+			size="30"
 		/>
 
 		<field

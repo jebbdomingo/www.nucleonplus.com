@@ -14,6 +14,9 @@ if(version_compare(JVERSION, '3.0', 'lt')){
 	JHtml::_('behavior.tooltip');
 }
 JHtml::_('behavior.formvalidation');
+
+$input     = JFactory::getApplication()->input;
+$sponsorId = $input->get('sponsor_id', null);
 ?>
 <div class="registration<?php echo $this->pageclass_sfx?>">
 <?php if ($this->params->get('show_page_heading')) : ?>
@@ -32,15 +35,26 @@ JHtml::_('behavior.formvalidation');
 				<legend><?php echo JText::_($fieldset->label);?></legend>
 			<?php endif;?>
 			<?php foreach ($fields as $field) :// Iterate through the fields in the set and display them.?>
+
+				<?php
+				if ($field->fieldname == 'sponsor_id' && $sponsorId)
+				{
+					$field->setValue($sponsorId);
+					$field->class = 'hidden';
+				}
+				?>
+
 				<?php if ($field->hidden):// If the field is hidden, just display the input.?>
 					<?php echo $field->input;?>
 				<?php else:?>
 					<div class="form-group">
 
 						<div class="col-sm-3 control-label">
-							<?php echo $field->label; ?>
-							<?php if (!$field->required && $field->type != 'Spacer') : ?>
-								<span class="optional"><?php echo JText::_('COM_USERS_OPTIONAL');?></span>
+							<?php if ($field->class <> 'hidden'): ?>
+								<?php echo $field->label; ?>
+								<?php if (!$field->required && $field->type != 'Spacer') : ?>
+									<span class="optional"><?php echo JText::_('COM_USERS_OPTIONAL');?></span>
+								<?php endif; ?>
 							<?php endif; ?>
 						</div>
 						<div class="col-sm-9">
