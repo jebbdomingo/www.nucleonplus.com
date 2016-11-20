@@ -34,3 +34,5 @@ components/com_cart
 libraries/koowa/components/com_dragonpay
 
 test_form.html
+
+libraries/koowa/components/com_xend
