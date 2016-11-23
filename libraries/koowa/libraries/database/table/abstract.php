@@ -557,6 +557,8 @@ abstract class KDatabaseTableAbstract extends KObject implements KDatabaseTableI
 
         if ($this->invokeCommand('before.select', $context) !== false)
         {
+            var_dump($context->query->toString());
+            echo '<br /><br />';
             if ($context->query)
             {
                 if($context->mode == KDatabase::FETCH_ARRAY_LIST || $context->mode == KDatabase::FETCH_OBJECT_LIST

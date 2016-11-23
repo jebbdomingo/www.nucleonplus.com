@@ -60,9 +60,6 @@ class KModelBehaviorPaginatable extends KModelBehaviorAbstract
             $state = $context->state;
             $limit = $state->limit;
 
-            var_dump($state->getValues());
-            echo '<br /><br />';
-
             if ($limit)
             {
                 $offset = $state->offset;
@@ -83,10 +80,6 @@ class KModelBehaviorPaginatable extends KModelBehaviorAbstract
                     $state->offset = $offset;
                 }
 
-                var_dump($limit);
-                echo '<br /><br />';
-                var_dump($offset);
-                echo '<br /><br />';
                 $context->query->limit($limit, $offset);
             }
         }
