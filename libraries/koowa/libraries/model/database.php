@@ -128,6 +128,8 @@ class KModelDatabase extends KModelAbstract
             $this->_buildQueryWhere($context->query);
             $this->_buildQueryGroup($context->query);
 
+            var_dump($context->query->toString());
+
             $data = $table->select($context->query, KDatabase::FETCH_ROWSET, $options);
         }
         else $data = $table->createRowset($options);
