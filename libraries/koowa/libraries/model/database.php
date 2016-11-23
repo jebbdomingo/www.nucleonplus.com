@@ -69,7 +69,7 @@ class KModelDatabase extends KModelAbstract
     {
         $config->append(array(
             'table'     => $this->getIdentifier()->name,
-            'behaviors' => array('paginatable', 'sortable'),
+            'behaviors' => array('sortable'),
         ));
 
         parent::_initialize($config);
@@ -140,7 +140,7 @@ class KModelDatabase extends KModelAbstract
             {
                 var_dump($entity->id);
             }
-            
+
             echo '<br /><br />';
         }
         else $data = $table->createRowset($options);
