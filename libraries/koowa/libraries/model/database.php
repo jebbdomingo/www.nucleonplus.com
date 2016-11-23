@@ -134,7 +134,8 @@ class KModelDatabase extends KModelAbstract
         }
         else $data = $table->createRowset($options);
 
-        var_dump($data);
+        var_dump(get_class($data));
+        var_dump(get_class_methods($data));
 
         return $data;
     }
