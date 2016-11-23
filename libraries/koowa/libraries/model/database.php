@@ -132,14 +132,19 @@ class KModelDatabase extends KModelAbstract
             echo '<br /><br />';
 
             $data = $table->select($context->query, KDatabase::FETCH_ROWSET, $options);
+
+            var_dump(count($data));
+            echo '<br /><br />';
+            
+            foreach ($data as $entity)
+            {
+                var_dump($entity->id);
+            }
+            
+            echo '<br /><br />';
         }
         else $data = $table->createRowset($options);
 
-        var_dump(count($data));
-        foreach ($data as $entity)
-        {
-            var_dump($entity->id);
-        }
 
         return $data;
     }
