@@ -36,3 +36,5 @@ libraries/koowa/components/com_dragonpay
 test_form.html
 
 libraries/koowa/components/com_xend
+
+plugins/system/nucleonplus
