@@ -88,16 +88,6 @@
 		/>
 
 		<field
-			name="sponsor_id"
-			type="text"
-			description="Your Sponsor's ID Number"
-			filter="string"
-			label="Sponsor ID"
-			required="false"
-			size="30"
-		/>
-
-		<field
 			name="captcha"
 			type="captcha"
 			label="COM_USERS_CAPTCHA_LABEL"
