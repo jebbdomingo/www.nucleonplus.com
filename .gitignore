@@ -38,3 +38,7 @@ test_form.html
 libraries/koowa/components/com_xend
 
 plugins/system/nucleonplus
+
+modules/mod_nucleonplus_login
+
+libraries/koowa/components/com_phlpost
