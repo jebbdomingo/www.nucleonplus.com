@@ -42,3 +42,5 @@ plugins/system/nucleonplus
 modules/mod_nucleonplus_login
 
 libraries/koowa/components/com_phlpost
+
+media/koowa/com_ckeditor

@@ -13,11 +13,25 @@ JHtml::_('behavior.keepalive');
 if(version_compare(JVERSION, '3.0', 'lt')){
 	JHtml::_('behavior.tooltip');
 }
-JHtml::_('behavior.formvalidation');
+JHtml::_('behavior.formvalidator');
 
 $input     = JFactory::getApplication()->input;
 $sponsorId = $input->get('sponsor_id', null);
 ?>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	jQuery('#member-registration').submit(function(){
+		var validator = new JFormValidator;
+
+		if (validator.isValid('#member-registration')) {
+			jQuery('button[type=submit]').prop('disabled', true);
+		}
+	});
+
+});
+</script>
+
 <div class="registration<?php echo $this->pageclass_sfx?>">
 <?php if ($this->params->get('show_page_heading')) : ?>
 	<div class="page-header">
